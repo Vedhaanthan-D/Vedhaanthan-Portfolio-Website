@@ -165,7 +165,7 @@ export default function Hero() {
             {[
               { href: 'https://github.com/Vedhaanthan-D', icon: GithubIcon, label: 'GitHub' },
               { href: 'https://www.linkedin.com/in/vedhaanthan-d-5500a5247/', icon: LinkedinIcon, label: 'LinkedIn' },
-              { href: 'https://www.behance.net/vedhaanthan', icon: BehanceIcon, label: 'Behance' },
+              { href: 'https://www.behance.net/vedhaanthan-d', icon: BehanceIcon, label: 'Behance' },
             ].map(({ href, icon: Icon, label }) => (
               <a
                 key={label}
