@@ -20,7 +20,7 @@ const BehanceIcon = ({ size = 16 }) => <FaBehance size={size} />;
 const socials = [
   { icon: GithubIcon, label: 'GitHub', href: 'https://github.com/Vedhaanthan-D', desc: 'Vedhaanthan-D' },
   { icon: LinkedinIcon, label: 'LinkedIn', href: 'https://www.linkedin.com/in/vedhaanthan-d-5500a5247/', desc: 'vedhaanthan-d' },
-  { icon: BehanceIcon, label: 'Behance', href: 'https://www.behance.net/vedhaanthan', desc: 'Portfolio' },
+  { icon: BehanceIcon, label: 'Behance', href: 'https://www.behance.net/vedhaanthan-d', desc: 'vedhaanthan-d' },
 ];
 
 export default function Contact() {
