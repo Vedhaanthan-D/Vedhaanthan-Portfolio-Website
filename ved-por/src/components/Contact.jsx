@@ -27,9 +27,16 @@ export default function Contact() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
   const [sent, setSent] = useState(false);
+  const [honeypot, setHoneypot] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // 🛡️ Honeypot check (blocks bots)
+    if (honeypot) {
+      console.log("Bot detected 🚫");
+      return;
+    }
 
     const templateParams = {
       name: form.name,
@@ -140,6 +147,14 @@ export default function Contact() {
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
+                  <input
+                    type="text"
+                    name="hidden_field"
+                    style={{ display: 'none' }}
+                    tabIndex="-1"
+                    autoComplete="off"
+                    onChange={(e) => setHoneypot(e.target.value)}
+                  />
                   <div className="grid sm:grid-cols-2 gap-5">
                     {[
                       { id: 'name', label: 'Your Name', type: 'text', placeholder: 'Vedhaanthan D' },
