@@ -68,10 +68,10 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="inline-flex items-center gap-2 glass rounded-full px-10 py-5 mb-6"
+            className="inline-flex items-center gap-1.5 glass rounded-full px-5 py-2 mb-5"
           >
-            <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-            <span className="text-sm text-white/70">Available for opportunities</span>
+            <span className="w-1 h-1 rounded-full bg-green-400 animate-pulse" />
+            <span className="text-xs text-white/70">Available for opportunities</span>
           </motion.div>
 
           {/* Name */}
