@@ -18,6 +18,12 @@
 
 html { scroll-behavior: smooth; }
 
+/* Use a JS-updated --vh to avoid browser UI causing inconsistent 100vh.
+   The variable is set at runtime in main.jsx. */
+:root {
+  --vh: 1vh;
+}
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -25,7 +31,12 @@ body {
   color: #f1f5f9;
   overflow-x: hidden;
   cursor: none;
+  height: calc(var(--vh, 1vh) * 100);
 }
+
+/* Ensure utility h-screen/min-h-screen behave consistently */
+.h-screen { height: calc(var(--vh, 1vh) * 100); }
+.min-h-screen { min-height: calc(var(--vh, 1vh) * 100); }
 
 /* ───────── Custom Cursor ───────── */
 #cursor-outer {
@@ -174,7 +185,7 @@ body.cursor-hover #cursor-inner {
 
 @keyframes scanline {
   0% { transform: translateY(-100%); }
-  100% { transform: translateY(100vh); }
+  100% { transform: translateY(calc(var(--vh, 1vh) * 100)); }
 }
 
 @keyframes fadeSlideUp {
