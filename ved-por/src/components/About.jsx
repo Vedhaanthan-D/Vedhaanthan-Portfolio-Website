@@ -11,7 +11,7 @@ const stats = [
   { label: 'Internships', value: '3+', icon: Briefcase },
   { label: 'Projects', value: '7+', icon: Code2 },
   { label: 'CGPA', value: '8.8', icon: Brain },
-  { label: 'LeetCode', value: '50+', icon: Users },
+  { label: 'LeetCode', value: '60+', icon: Users },
 ];
 
 export default function About() {

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
-import { MapPin, Mail, Phone, ExternalLink, ChevronDown } from 'lucide-react';
+import { MapPin, Mail, ExternalLink, ChevronDown } from 'lucide-react';
 import { FaBehance } from 'react-icons/fa';
 
 // Inline brand icons (since lucide-react v1.9 doesn't include brand icons)
@@ -94,8 +94,8 @@ export default function Hero() {
             <span className="text-white/50">I am a </span>
             <TypeAnimation
               sequence={[
+                'Full Stack Developer', 2000,
                 'UI/UX Designer', 2000,
-                'Frontend Developer', 2000,
                 'AI & Data Science Student', 2000,
                 'Creative Problem Solver', 2000,
               ]}
@@ -128,7 +128,6 @@ export default function Hero() {
             {[
               { icon: MapPin, label: 'Erode, Tamil Nadu' },
               { icon: Mail, label: 'vedhaanthan2006@gmail.com' },
-              { icon: Phone, label: '+91 88257 22898' },
             ].map(({ icon: Icon, label }) => (
               <div key={label} className="flex items-center gap-2 text-sm text-white/60 glass rounded-full px-3 py-1.5">
                 <Icon size={13} className="text-purple-400" />
@@ -222,8 +221,8 @@ export default function Hero() {
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
               className="absolute -top-4 -left-4 glass rounded-2xl px-4 py-2.5 text-center"
             >
-              <div className="text-xl font-bold gradient-text">7+</div>
-              <div className="text-xs text-white/60">Projects</div>
+              <div className="text-xl font-bold gradient-text">60+</div>
+              <div className="text-xs text-white/60">Leetcode <br /> Problems</div>
             </motion.div>
           </div>
         </motion.div>

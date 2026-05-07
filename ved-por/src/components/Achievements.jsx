@@ -5,31 +5,31 @@ import { Trophy, Code2, Palette, Globe, Zap } from 'lucide-react';
 const achievements = [
   {
     icon: Code2,
-    emoji: '💻',
-    title: '50+ LeetCode Problems',
-    desc: 'Solved 50+ coding challenges to strengthen algorithmic problem-solving and data structure skills.',
-    color: 'from-purple-600 to-fuchsia-500',
+    title: '70+ LeetCode Problems',
+    desc: 'Solved 70+ coding challenges to strengthen algorithmic problem-solving and data structure skills.',
+    iconBg: 'bg-violet-100',
+    iconColor: 'text-violet-700',
   },
   {
     icon: Globe,
-    emoji: '🌐',
     title: 'Live Production Design',
     desc: 'Designed and delivered complete website and mobile UI for Azhizen Solutions — now live in production and serving real users.',
-    color: 'from-violet-600 to-purple-500',
+    iconBg: 'bg-cyan-100',
+    iconColor: 'text-cyan-700',
   },
   {
     icon: Palette,
-    emoji: '🎨',
     title: 'UI/UX Case Studies',
     desc: 'Completed multiple real-world UI/UX case studies and design prototypes showcasing end-to-end design thinking.',
-    color: 'from-fuchsia-600 to-pink-500',
+    iconBg: 'bg-pink-100',
+    iconColor: 'text-pink-700',
   },
   {
     icon: Trophy,
-    emoji: '🏆',
     title: 'AI4Good Hackathon',
     desc: 'Attended the AI4Good Hackathon — a prestigious national-level hackathon held in Delhi, building AI-powered solutions for social good.',
-    color: 'from-yellow-600 to-amber-500',
+    iconBg: 'bg-amber-100',
+    iconColor: 'text-amber-700',
   },
 ];
 
@@ -51,7 +51,7 @@ export default function Achievements() {
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {achievements.map(({ icon: Icon, emoji, title, desc, color }, i) => (
+          {achievements.map(({ icon: Icon, title, desc, iconBg, iconColor }, i) => (
             <motion.div
               key={title}
               initial={{ opacity: 0, y: 40 }}
@@ -59,8 +59,8 @@ export default function Achievements() {
               transition={{ delay: i * 0.12, duration: 0.6, ease: [0.22,1,0.36,1] }}
               className="glass-dark rounded-2xl p-6 poly-card text-center group"
             >
-              <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${color} flex items-center justify-center text-3xl mx-auto mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3`}>
-                {emoji}
+              <div className={`w-16 h-16 rounded-2xl ${iconBg} border border-white/20 shadow-[0_8px_24px_rgba(0,0,0,0.25)] flex items-center justify-center mx-auto mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3`}>
+                <Icon size={30} className={iconColor} />
               </div>
               <h3 className="font-bold text-white mb-2">{title}</h3>
               <p className="text-white/55 text-sm leading-relaxed">{desc}</p>
@@ -72,7 +72,7 @@ export default function Achievements() {
         <motion.div
           initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.5, duration: 0.6 }}
-          className="mt-12 glass-dark rounded-3xl p-8"
+          className="mt-12 glass-dark rounded-lg p-8"
         >
           <h3 className="font-bold text-white text-xl mb-6 text-center flex items-center justify-center gap-2">
             <Zap size={20} className="text-purple-400" />
@@ -92,7 +92,7 @@ export default function Achievements() {
               <motion.div
                 key={skill}
                 whileHover={{ scale: 1.08, y: -4 }}
-                className="glass rounded-xl px-4 py-2.5 flex items-center gap-2 cursor-none"
+                className="glass rounded-lg px-4 py-2.5 flex items-center gap-2 cursor-none"
               >
                 <span>{emoji}</span>
                 <span className="text-sm text-white/75 font-medium">{skill}</span>

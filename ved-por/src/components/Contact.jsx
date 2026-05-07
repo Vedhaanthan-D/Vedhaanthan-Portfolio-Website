@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Send, ExternalLink, CheckCircle2 } from 'lucide-react';
+import { Mail, MapPin, Send, ExternalLink, CheckCircle2 } from 'lucide-react';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -91,7 +91,6 @@ export default function Contact() {
           >
             {[
               { icon: Mail, label: 'Email', value: 'vedhaanthan2006@gmail.com', href: 'mailto:vedhaanthan2006@gmail.com' },
-              { icon: Phone, label: 'Phone', value: '+91 88257 22898', href: 'tel:+918825722898' },
               { icon: MapPin, label: 'Location', value: 'Erode, Tamil Nadu, India', href: null },
             ].map(({ icon: Icon, label, value, href }) => (
               <div key={label} className="glass-dark rounded-2xl p-5 poly-card flex items-center gap-4">
