@@ -221,7 +221,7 @@ export default function Hero() {
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
               className="absolute -top-4 -left-4 glass rounded-2xl px-4 py-2.5 text-center"
             >
-              <div className="text-xl font-bold gradient-text">60+</div>
+              <div className="text-xl font-bold gradient-text">70+</div>
               <div className="text-xs text-white/60">Leetcode <br /> Problems</div>
             </motion.div>
           </div>
